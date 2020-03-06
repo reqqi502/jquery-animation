@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div id="container">
+            <div class="photo">
+                <img src="img1.png" alt="" class="photo-image"/>
+                <img src="img2.png" alt="" class="photo-image"/>
+                <img src="img3.png" alt="" class="photo-image"/>
+            </div>
+        </div>
+    </center>
+
+	<script>
+		$(document).ready(function(){
+
+    // Exercice 1 : hover image
+    $("img").hover(function(){
+      $(this).animate({
+          width: '400px',
+          height: '300px'
+      });
+      }, function(){
+      $(this).animate({
+          width: '200px',
+          height: '150px'
+      });
+    });
+
+
+
+    // Exercice 2 : login validation
+    $('#pass').validate(function(){
+        var password = $('#password').val();
+        if(password.length != 8){
+            password.css('red')
+        }
+    });
+});
+	</script>
+
+</body>
+</html>
